@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		868D40362034B6AC0089C974 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D40352034B6AC0089C974 /* BaseService.swift */; };
+		868D40382034B6CE0089C974 /* MeasurementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D40372034B6CE0089C974 /* MeasurementsService.swift */; };
 		86E926AF2034A82E005D129C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E926AE2034A82E005D129C /* AppDelegate.swift */; };
 		86E926B62034A82E005D129C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E926B52034A82E005D129C /* Assets.xcassets */; };
 		86E926C42034A82E005D129C /* MeasurementsViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E926C32034A82E005D129C /* MeasurementsViewerTests.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		868D40352034B6AC0089C974 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		868D40372034B6CE0089C974 /* MeasurementsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsService.swift; sourceTree = "<group>"; };
 		86E926AB2034A82E005D129C /* MeasurementsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasurementsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E926AE2034A82E005D129C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E926B52034A82E005D129C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 		86E926E32034AC3B005D129C /* MeasurementsService */ = {
 			isa = PBXGroup;
 			children = (
+				868D40372034B6CE0089C974 /* MeasurementsService.swift */,
 			);
 			path = MeasurementsService;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 		86E926E42034AC3B005D129C /* BaseService */ = {
 			isa = PBXGroup;
 			children = (
+				868D40352034B6AC0089C974 /* BaseService.swift */,
 			);
 			path = BaseService;
 			sourceTree = "<group>";
@@ -282,9 +288,11 @@
 			files = (
 				86E926DA2034AA11005D129C /* MeasurementsViewController.swift in Sources */,
 				86E926AF2034A82E005D129C /* AppDelegate.swift in Sources */,
+				868D40362034B6AC0089C974 /* BaseService.swift in Sources */,
 				86E926E12034AA61005D129C /* MeasurementsView.swift in Sources */,
 				86E926DC2034AA29005D129C /* BaseViewController.swift in Sources */,
 				86E926DE2034AA35005D129C /* BaseView.swift in Sources */,
+				868D40382034B6CE0089C974 /* MeasurementsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

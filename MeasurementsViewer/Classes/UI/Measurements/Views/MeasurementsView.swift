@@ -10,9 +10,20 @@ import UIKit
 
 class MeasurementsView: BaseView {
     
+    let tableView: UITableView = {
+        let v = UITableView()
+        v.separatorStyle = .none
+        return v
+    }()
+    
     override func setup() {
         super.setup()
-        self.backgroundColor = .blue
+        self.addSubview(self.tableView)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.tableView.frame = self.bounds
     }
     
 }
