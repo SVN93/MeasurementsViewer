@@ -10,8 +10,8 @@ import Foundation
 
 class MeasurementsService: BaseService, StreamDelegate {
     
-    private let host = "https://jsdemo.envdev.io/sse"
-//    private let host = "www.apple.com"
+    private let hostString = "https://jsdemo.envdev.io/sse"
+//    private let hostString = "www.apple.com"
     private let port: Int = 443
 //    private let port: Int = 80
     private let maxReadLength: Int = 1024
@@ -23,7 +23,7 @@ class MeasurementsService: BaseService, StreamDelegate {
     }
     
     func connect() {
-        Stream.getStreamsToHost(withName: self.host, port: self.port, inputStream: &self.inputStream, outputStream: &self.outputStream)
+        Stream.getStreamsToHost(withName: self.hostString, port: self.port, inputStream: &self.inputStream, outputStream: &self.outputStream)
         
         guard let _ = self.inputStream, let _ = self.outputStream else {
             print("Something went wrong!")
@@ -146,6 +146,7 @@ class MeasurementsService: BaseService, StreamDelegate {
             break
             
         default:
+            print("Unsupported case.")
             break
         }
     }
