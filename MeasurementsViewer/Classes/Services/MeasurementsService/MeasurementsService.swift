@@ -12,10 +12,8 @@ class MeasurementsService: BaseService, StreamDelegate {
     
     private let hostString = "jsdemo.envdev.io"
     private let apiString = "https://jsdemo.envdev.io/sse"
-//    private let hostString = "www.apple.com"
     private let port: Int = 443
-//    private let port: Int = 80
-    private let maxReadLength: Int = 1024
+    private let maxReadLength: Int = 4096
     private var inputStream: InputStream?
     private var outputStream: OutputStream?
     
@@ -37,8 +35,8 @@ class MeasurementsService: BaseService, StreamDelegate {
         self.inputStream?.schedule(in: RunLoop.current, forMode: .defaultRunLoopMode)
         self.outputStream?.schedule(in: RunLoop.current, forMode: .defaultRunLoopMode)
 
-        inputStream?.setProperty(StreamSocketSecurityLevel.tlSv1, forKey: .socketSecurityLevelKey)
-        outputStream?.setProperty(StreamSocketSecurityLevel.tlSv1, forKey: .socketSecurityLevelKey)
+        self.inputStream?.setProperty(StreamSocketSecurityLevel.tlSv1, forKey: .socketSecurityLevelKey)
+        self.outputStream?.setProperty(StreamSocketSecurityLevel.tlSv1, forKey: .socketSecurityLevelKey)
 
         self.inputStream?.open()
         self.outputStream?.open()
@@ -69,23 +67,9 @@ class MeasurementsService: BaseService, StreamDelegate {
         }
     }
     
-//    func processedMeasurementsString(buffer: UnsafeMutablePointer<UInt8>,
-//                                        length: Int) -> Measurements? {
-//        guard let stringArray = String(bytesNoCopy: buffer,
-//                                       length: length,
-//                                       encoding: .ascii,
-//                                       freeWhenDone: true)?.components(separatedBy: ":"),
-//            let name = stringArray.first,
-//            let message = stringArray.last else {
-//                return nil
-//        }
-//
-//        let messageSender:MessageSender = (name == self.username) ? .ourself : .someoneElse
-//
-//        return Message(message: message, messageSender: messageSender, username: name)
-//    }
-
     func readAvailableBytes(stream: InputStream) {
+        var data = Data()
+        var totalBytesRead = 0
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: self.maxReadLength)
         while stream.hasBytesAvailable {
             let numberOfBytesRead = stream.read(buffer, maxLength: self.maxReadLength)
@@ -95,26 +79,22 @@ class MeasurementsService: BaseService, StreamDelegate {
                 }
             }
             
-            //Construct the Message object
             if (numberOfBytesRead > 0) {
-                let output = String(cString:buffer)
-                NSLog("server said: %@", output)
+                data.append(buffer, count: numberOfBytesRead)
+                totalBytesRead += numberOfBytesRead
             } else {
-                NSLog("empty string from stream")
+                NSLog("Empty string from stream. Something went wrong!")
             }
             
         }
         buffer.deallocate(capacity: self.maxReadLength)
         
-//        String(bytesNoCopy: buffer, length: self.maxReadLength, encoding: .ascii, freeWhenDone: true)
-//        guard let stringArray = String(bytesNoCopy: buffer,
-//                                       length: self.maxReadLength,
-//                                       encoding: .ascii,
-//                                       freeWhenDone: true)?.components(separatedBy: ":"),
-//            let name = stringArray.first,
-//            let message = stringArray.last else {
-//                return nil
-//        }
+        if data.isEmpty == false {
+            if let dataString = String(data: data, encoding: .utf8) {
+                NSLog("server said: %@", dataString)
+                //TODO: start Measurements mapping!
+            }
+        }
     }
     
     deinit {
@@ -130,7 +110,7 @@ class MeasurementsService: BaseService, StreamDelegate {
         print("EventCode = \(eventCode)")
         switch eventCode {
         case Stream.Event.openCompleted:
-            print("Stream opened!")
+            print("Stream \(aStream.debugDescription) opened!")
             break
             
         case Stream.Event.hasBytesAvailable:
