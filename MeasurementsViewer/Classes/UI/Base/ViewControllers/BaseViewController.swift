@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
 
     open func commpnSetup() {
-        self.edgesForExtendedLayout = []
+        self.automaticallyAdjustsScrollViewInsets = true
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

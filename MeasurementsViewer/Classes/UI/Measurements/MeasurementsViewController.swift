@@ -11,6 +11,7 @@ import UIKit
 class MeasurementsViewController: BaseViewController {
 
     let measurementsView = MeasurementsView()
+    let measurementsService = MeasurementsService()
     
     override func loadView() {
         self.view = self.measurementsView
@@ -19,6 +20,12 @@ class MeasurementsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Measurements", comment: "")
+        
+        self.measurementsService.connect()
+    }
+    
+    deinit {
+        self.measurementsService.disconnect()
     }
 
 }
