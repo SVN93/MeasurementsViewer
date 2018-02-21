@@ -10,7 +10,8 @@ import Foundation
 
 class MeasurementsService: BaseService, StreamDelegate {
     
-    private let hostString = "https://jsdemo.envdev.io/sse"
+    private let hostString = "jsdemo.envdev.io"
+    private let apiString = "https://jsdemo.envdev.io/sse"
 //    private let hostString = "www.apple.com"
     private let port: Int = 443
 //    private let port: Int = 80
@@ -36,6 +37,9 @@ class MeasurementsService: BaseService, StreamDelegate {
         self.inputStream?.schedule(in: RunLoop.current, forMode: .defaultRunLoopMode)
         self.outputStream?.schedule(in: RunLoop.current, forMode: .defaultRunLoopMode)
 
+        inputStream?.setProperty(StreamSocketSecurityLevel.tlSv1, forKey: .socketSecurityLevelKey)
+        outputStream?.setProperty(StreamSocketSecurityLevel.tlSv1, forKey: .socketSecurityLevelKey)
+
         self.inputStream?.open()
         self.outputStream?.open()
     }
@@ -55,11 +59,15 @@ class MeasurementsService: BaseService, StreamDelegate {
         self.outputStream = nil
     }
     
-//    func write(_ data: Data) {
-//        let _ = data.withUnsafeBytes { (unsafePointer:UnsafePointer<UInt8>) in
-//            let bytesWritten = self.outputStream?.write(unsafePointer, maxLength: data.count)
-//        }
-//    }
+    func write(_ data: Data) {
+        let _ = data.withUnsafeBytes { (unsafePointer:UnsafePointer<UInt8>) in
+            if let bytesWritten = self.outputStream?.write(unsafePointer, maxLength: data.count) {
+                print("Bytes written \(bytesWritten)")
+            } else {
+                print("No bytes written!")
+            }
+        }
+    }
     
 //    func processedMeasurementsString(buffer: UnsafeMutablePointer<UInt8>,
 //                                        length: Int) -> Measurements? {
@@ -82,8 +90,8 @@ class MeasurementsService: BaseService, StreamDelegate {
         while stream.hasBytesAvailable {
             let numberOfBytesRead = stream.read(buffer, maxLength: self.maxReadLength)
             if numberOfBytesRead < 0 {
-                if let _ = stream.streamError {
-                    break
+                if let streamError = stream.streamError {
+                    print(streamError.localizedDescription)
                 }
             }
             
@@ -132,6 +140,12 @@ class MeasurementsService: BaseService, StreamDelegate {
             break
             
         case Stream.Event.hasSpaceAvailable:
+            if (aStream == self.outputStream) {
+                if let data = "GET \(self.apiString) HTTP/1.0\r\n\r\n".data(using: .utf8, allowLossyConversion: true) {
+                    self.write(data)
+                    self.outputStream?.close()
+                }
+            }
             break
             
         case Stream.Event.errorOccurred:
