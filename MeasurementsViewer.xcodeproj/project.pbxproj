@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750E6FC66AC77A238CA2B189 /* Pods_MeasurementsViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740B0C546A96687FBA892289 /* Pods_MeasurementsViewer.framework */; };
 		868D40362034B6AC0089C974 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D40352034B6AC0089C974 /* BaseService.swift */; };
 		868D40382034B6CE0089C974 /* MeasurementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D40372034B6CE0089C974 /* MeasurementsService.swift */; };
+		86A29F1B2041FCFF00D6343D /* MeasurementsContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A29F1A2041FCFF00D6343D /* MeasurementsContainerCell.swift */; };
+		86A29F1E2041FE6000D6343D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A29F1D2041FE6000D6343D /* BaseTableViewCell.swift */; };
+		86A29F2120420CEF00D6343D /* DetailMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A29F2020420CEF00D6343D /* DetailMeasurementsViewController.swift */; };
+		86A29F2420420DE100D6343D /* DetailMeasurementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A29F2320420DE100D6343D /* DetailMeasurementsView.swift */; };
 		86E926AF2034A82E005D129C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E926AE2034A82E005D129C /* AppDelegate.swift */; };
 		86E926B62034A82E005D129C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E926B52034A82E005D129C /* Assets.xcassets */; };
 		86E926C42034A82E005D129C /* MeasurementsViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E926C32034A82E005D129C /* MeasurementsViewerTests.swift */; };
@@ -16,6 +21,9 @@
 		86E926DC2034AA29005D129C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E926DB2034AA29005D129C /* BaseViewController.swift */; };
 		86E926DE2034AA35005D129C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E926DD2034AA35005D129C /* BaseView.swift */; };
 		86E926E12034AA61005D129C /* MeasurementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E926E02034AA61005D129C /* MeasurementsView.swift */; };
+		86FACD4D2041D31E00E39AA7 /* MeasurementContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FACD4C2041D31E00E39AA7 /* MeasurementContainer.swift */; };
+		86FACD4F2041D32D00E39AA7 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FACD4E2041D32D00E39AA7 /* Measurement.swift */; };
+		BE91E8567C29E6684E79A651 /* Pods_MeasurementsViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F66D723F82D89228C9F053 /* Pods_MeasurementsViewerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6DCC92E16435A0C774C497E9 /* Pods-MeasurementsViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasurementsViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeasurementsViewerTests/Pods-MeasurementsViewerTests.release.xcconfig"; sourceTree = "<group>"; };
+		740B0C546A96687FBA892289 /* Pods_MeasurementsViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeasurementsViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		868D40352034B6AC0089C974 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		868D40372034B6CE0089C974 /* MeasurementsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsService.swift; sourceTree = "<group>"; };
+		86A29F1A2041FCFF00D6343D /* MeasurementsContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsContainerCell.swift; sourceTree = "<group>"; };
+		86A29F1D2041FE6000D6343D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		86A29F2020420CEF00D6343D /* DetailMeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMeasurementsViewController.swift; sourceTree = "<group>"; };
+		86A29F2320420DE100D6343D /* DetailMeasurementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMeasurementsView.swift; sourceTree = "<group>"; };
 		86E926AB2034A82E005D129C /* MeasurementsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeasurementsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E926AE2034A82E005D129C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E926B52034A82E005D129C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +56,12 @@
 		86E926DB2034AA29005D129C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		86E926DD2034AA35005D129C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		86E926E02034AA61005D129C /* MeasurementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsView.swift; sourceTree = "<group>"; };
+		86FACD4C2041D31E00E39AA7 /* MeasurementContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementContainer.swift; sourceTree = "<group>"; };
+		86FACD4E2041D32D00E39AA7 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		9B1643DD4D3E2D917C6A7FD0 /* Pods-MeasurementsViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasurementsViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeasurementsViewer/Pods-MeasurementsViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		D8092EF61CA0C5C3DACF6910 /* Pods-MeasurementsViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasurementsViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeasurementsViewer/Pods-MeasurementsViewer.release.xcconfig"; sourceTree = "<group>"; };
+		DA8B432B221BFE189265D5BD /* Pods-MeasurementsViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasurementsViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeasurementsViewerTests/Pods-MeasurementsViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3F66D723F82D89228C9F053 /* Pods_MeasurementsViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeasurementsViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750E6FC66AC77A238CA2B189 /* Pods_MeasurementsViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,18 +77,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE91E8567C29E6684E79A651 /* Pods_MeasurementsViewerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E8F6D7C2259D9EF5F25D19D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B1643DD4D3E2D917C6A7FD0 /* Pods-MeasurementsViewer.debug.xcconfig */,
+				D8092EF61CA0C5C3DACF6910 /* Pods-MeasurementsViewer.release.xcconfig */,
+				DA8B432B221BFE189265D5BD /* Pods-MeasurementsViewerTests.debug.xcconfig */,
+				6DCC92E16435A0C774C497E9 /* Pods-MeasurementsViewerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86A29F192041FCC500D6343D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86A29F1A2041FCFF00D6343D /* MeasurementsContainerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		86A29F1C2041FE5600D6343D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86A29F1D2041FE6000D6343D /* BaseTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		86A29F1F20420CBA00D6343D /* DetailMeasurements */ = {
+			isa = PBXGroup;
+			children = (
+				86A29F2020420CEF00D6343D /* DetailMeasurementsViewController.swift */,
+				86A29F2220420DC700D6343D /* Views */,
+			);
+			path = DetailMeasurements;
+			sourceTree = "<group>";
+		};
+		86A29F2220420DC700D6343D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86A29F2320420DE100D6343D /* DetailMeasurementsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		86E926A22034A82E005D129C = {
 			isa = PBXGroup;
 			children = (
 				86E926AD2034A82E005D129C /* MeasurementsViewer */,
 				86E926C22034A82E005D129C /* MeasurementsViewerTests */,
 				86E926AC2034A82E005D129C /* Products */,
+				2E8F6D7C2259D9EF5F25D19D /* Pods */,
+				9F26FF841C4EDC428721102C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +191,7 @@
 			children = (
 				86E926D62034AA11005D129C /* MeasurementsViewController.swift */,
 				86E926DF2034AA4D005D129C /* Views */,
+				86A29F1F20420CBA00D6343D /* DetailMeasurements */,
 			);
 			path = Measurements;
 			sourceTree = "<group>";
@@ -148,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				86E926DD2034AA35005D129C /* BaseView.swift */,
+				86A29F1C2041FE5600D6343D /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				86E926E02034AA61005D129C /* MeasurementsView.swift */,
+				86A29F192041FCC500D6343D /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				868D40372034B6CE0089C974 /* MeasurementsService.swift */,
+				86FACD4B2041D2F100E39AA7 /* Models */,
 			);
 			path = MeasurementsService;
 			sourceTree = "<group>";
@@ -185,6 +257,24 @@
 			path = BaseService;
 			sourceTree = "<group>";
 		};
+		86FACD4B2041D2F100E39AA7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86FACD4C2041D31E00E39AA7 /* MeasurementContainer.swift */,
+				86FACD4E2041D32D00E39AA7 /* Measurement.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F26FF841C4EDC428721102C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				740B0C546A96687FBA892289 /* Pods_MeasurementsViewer.framework */,
+				F3F66D723F82D89228C9F053 /* Pods_MeasurementsViewerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86E926C82034A82E005D129C /* Build configuration list for PBXNativeTarget "MeasurementsViewer" */;
 			buildPhases = (
+				8285F8AD115D70BA9D7618F3 /* [CP] Check Pods Manifest.lock */,
 				86E926A72034A82E005D129C /* Sources */,
 				86E926A82034A82E005D129C /* Frameworks */,
 				86E926A92034A82E005D129C /* Resources */,
+				EAEE3FD669091516BDB075E0 /* [CP] Embed Pods Frameworks */,
+				B6F5F2234B6405AACDC61B33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,9 +302,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86E926CB2034A82E005D129C /* Build configuration list for PBXNativeTarget "MeasurementsViewerTests" */;
 			buildPhases = (
+				D2D93FE3C81AE42A17EBE293 /* [CP] Check Pods Manifest.lock */,
 				86E926BB2034A82E005D129C /* Sources */,
 				86E926BC2034A82E005D129C /* Frameworks */,
 				86E926BD2034A82E005D129C /* Resources */,
+				85D1474563F9F58289A80D1C /* [CP] Embed Pods Frameworks */,
+				DC333AF96510D6668BE5266C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,6 +377,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8285F8AD115D70BA9D7618F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeasurementsViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D1474563F9F58289A80D1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeasurementsViewerTests/Pods-MeasurementsViewerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F5F2234B6405AACDC61B33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeasurementsViewer/Pods-MeasurementsViewer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2D93FE3C81AE42A17EBE293 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeasurementsViewerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC333AF96510D6668BE5266C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeasurementsViewerTests/Pods-MeasurementsViewerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAEE3FD669091516BDB075E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeasurementsViewer/Pods-MeasurementsViewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IKEventSource/IKEventSource.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IKEventSource.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeasurementsViewer/Pods-MeasurementsViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86E926A72034A82E005D129C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -291,7 +489,13 @@
 				868D40362034B6AC0089C974 /* BaseService.swift in Sources */,
 				86E926E12034AA61005D129C /* MeasurementsView.swift in Sources */,
 				86E926DC2034AA29005D129C /* BaseViewController.swift in Sources */,
+				86A29F2420420DE100D6343D /* DetailMeasurementsView.swift in Sources */,
+				86A29F1E2041FE6000D6343D /* BaseTableViewCell.swift in Sources */,
+				86FACD4F2041D32D00E39AA7 /* Measurement.swift in Sources */,
+				86A29F1B2041FCFF00D6343D /* MeasurementsContainerCell.swift in Sources */,
+				86A29F2120420CEF00D6343D /* DetailMeasurementsViewController.swift in Sources */,
 				86E926DE2034AA35005D129C /* BaseView.swift in Sources */,
+				86FACD4D2041D31E00E39AA7 /* MeasurementContainer.swift in Sources */,
 				868D40382034B6CE0089C974 /* MeasurementsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +628,7 @@
 		};
 		86E926C92034A82E005D129C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1643DD4D3E2D917C6A7FD0 /* Pods-MeasurementsViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -440,6 +645,7 @@
 		};
 		86E926CA2034A82E005D129C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8092EF61CA0C5C3DACF6910 /* Pods-MeasurementsViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,6 +662,7 @@
 		};
 		86E926CC2034A82E005D129C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8B432B221BFE189265D5BD /* Pods-MeasurementsViewerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +680,7 @@
 		};
 		86E926CD2034A82E005D129C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DCC92E16435A0C774C497E9 /* Pods-MeasurementsViewerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
