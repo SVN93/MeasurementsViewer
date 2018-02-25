@@ -38,6 +38,7 @@ class MeasurementsContainerCell: BaseTableViewCell {
             } else {
                 self.measurmentsCountLabel.text = ""
             }
+            
             self.setNeedsLayout()
         }
     }
