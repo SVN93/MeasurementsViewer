@@ -28,15 +28,7 @@ class MeasurementsContainerCell: BaseTableViewCell {
         v.textAlignment = .right
         return v
     }()
-    
-    static let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.timeZone = .current
-        formatter.dateStyle = .long
-        formatter.timeStyle = .short
-        return formatter
-    }()
-    
+        
     var measurementsContainer: MeasurementsContainer? {
         didSet {
             self.nameLabel.text = measurementsContainer?.name
