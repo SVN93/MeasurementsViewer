@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		750E6FC66AC77A238CA2B189 /* Pods_MeasurementsViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740B0C546A96687FBA892289 /* Pods_MeasurementsViewer.framework */; };
+		8638DC4F2043362600C540DA /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8638DC4E2043362600C540DA /* MeasurementCell.swift */; };
 		868D40362034B6AC0089C974 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D40352034B6AC0089C974 /* BaseService.swift */; };
 		868D40382034B6CE0089C974 /* MeasurementsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D40372034B6CE0089C974 /* MeasurementsService.swift */; };
 		86A29F1B2041FCFF00D6343D /* MeasurementsContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A29F1A2041FCFF00D6343D /* MeasurementsContainerCell.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		6DCC92E16435A0C774C497E9 /* Pods-MeasurementsViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeasurementsViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeasurementsViewerTests/Pods-MeasurementsViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		740B0C546A96687FBA892289 /* Pods_MeasurementsViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeasurementsViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8638DC4E2043362600C540DA /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
 		868D40352034B6AC0089C974 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		868D40372034B6CE0089C974 /* MeasurementsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsService.swift; sourceTree = "<group>"; };
 		86A29F1A2041FCFF00D6343D /* MeasurementsContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsContainerCell.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8638DC4D2043360C00C540DA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8638DC4E2043362600C540DA /* MeasurementCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		86A29F192041FCC500D6343D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				86A29F2320420DE100D6343D /* DetailMeasurementsView.swift */,
+				8638DC4D2043360C00C540DA /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -484,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8638DC4F2043362600C540DA /* MeasurementCell.swift in Sources */,
 				86E926DA2034AA11005D129C /* MeasurementsViewController.swift in Sources */,
 				86E926AF2034A82E005D129C /* AppDelegate.swift in Sources */,
 				868D40362034B6AC0089C974 /* BaseService.swift in Sources */,

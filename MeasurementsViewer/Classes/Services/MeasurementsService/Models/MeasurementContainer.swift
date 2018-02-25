@@ -10,10 +10,9 @@ import UIKit
 
 class MeasurementsContainer {
 //    enum Name: String {
-//        case pressure, temperature, serial
-//    }
-//    enum Unit: String {
-//        case v, mgm3
+//        case pressure = "Pressure"
+//        case temperature = "Temperature"
+//        case serial = "Serial"
 //    }
 
     var id: String
@@ -25,7 +24,7 @@ class MeasurementsContainer {
         self.id = dictionary["_id"] as! String
         self.name = dictionary["name"] as! String
         self.unit = dictionary["unit"] as? String
-        if let measurements = dictionary["measurements"] as? [[Any]] {
+        if let measurements = dictionary["measurements"] as? [[Any]], measurements.count > 0 {
             self.measurements = [Measurement]()
             for measurementArray in measurements {
                 let measurement = Measurement(measurementArray)

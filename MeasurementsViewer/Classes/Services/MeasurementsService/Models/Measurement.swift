@@ -11,25 +11,20 @@ import UIKit
 class Measurement {
 
     var timestamp: Date
-    var values: [Any]
+    var locations: [Double]?
+    var value: Double?
+    var serialNumber: String?
     
     init(_ array: [Any]) {
-//        print(array)
         self.timestamp = Date(timeIntervalSince1970: array.first as! TimeInterval)
         if array.last is Array<Any> {
-            self.values = array.last as! [Any]
+            self.locations = array.last as? [Double]
         } else {
-            self.values = [array.last as Any]
-
-//            if let stringValue = array.last as? String {
-//                if let doubleStr = Double(stringValue) {
-//                    self.values = [ doubleStr ]
-//                } else {
-//                    self.values = [ 0 ]
-//                }
-//            } else {
-//                self.values = [array.last as! Double]
-//            }
+            if let stringValue = array.last as? String {
+                self.serialNumber = stringValue
+            } else {
+                self.value = array.last as? Double
+            }
         }
     }
     

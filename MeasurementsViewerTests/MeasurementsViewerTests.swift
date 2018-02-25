@@ -11,6 +11,13 @@ import XCTest
 
 class MeasurementsViewerTests: XCTestCase {
     
+    let measurementsContainerJSON: Dictionary<String, Any> = {
+        var dictionary = Dictionary<String, Any>()
+        dictionary["_id"] = "Some ID"
+        dictionary["name"] = "Test Name"
+        return dictionary
+    }()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,6 +30,10 @@ class MeasurementsViewerTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
+        
+        let measurementsContainer = MeasurementsContainer(self.measurementsContainerJSON)
+        XCTAssert(measurementsContainer.name == "Test Name", "Name was correctly mapped")
+        XCTAssert(measurementsContainer.id == "Some ID", "Id was correctly mapped")
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     

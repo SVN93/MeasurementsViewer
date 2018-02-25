@@ -10,11 +10,7 @@ import UIKit
 
 class MeasurementsView: BaseView {
     
-    let tableView: UITableView = {
-        let v = UITableView()
-        v.separatorStyle = .none
-        return v
-    }()
+    let tableView = UITableView()
     
     override func setup() {
         super.setup()
